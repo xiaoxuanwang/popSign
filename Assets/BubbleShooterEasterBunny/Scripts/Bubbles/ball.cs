@@ -4,6 +4,7 @@ using System.Threading;
 using InitScriptName;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ball : MonoBehaviour
 {
@@ -144,7 +145,12 @@ public class ball : MonoBehaviour
     void Update()
     {
 		//POPSign detect whether current ball is same with current video
-		if(!launched && !gameObject.GetComponent<ball>().setTarget && mainscript.Instance.newBall2 == null /*&& mainscript.Instance.newBall == null*/ && newBall && !Camera.main.GetComponent<mainscript>().gameOver && ( GamePlay.Instance.GameStatus == GameState.Playing || GamePlay.Instance.GameStatus == GameState.WaitForChicken ) ) {
+		if(!launched && !gameObject.GetComponent<ball>().setTarget && 
+				mainscript.Instance.newBall2 == null /*&& mainscript.Instance.newBall == null*/ && 
+				newBall && !Camera.main.GetComponent<mainscript>().gameOver && 
+				( GamePlay.Instance.GameStatus == GameState.Playing || 
+				GamePlay.Instance.GameStatus == GameState.WaitForChicken ) ) 
+		{
 			Video ballVideo = sharedVideoManager.getVideoByColor (gameObject.GetComponent<ColorBallScript> ().mainColor);
 			if (sharedVideoManager.curtVideo == null || sharedVideoManager.curtVideo.fileName != ballVideo.fileName) {
 				//POPSign when click the screen it should change Video
@@ -166,20 +172,40 @@ public class ball : MonoBehaviour
 					//POPSign Once it is launched, we should change the bubble to its orginal color.
 					int orginalColor = (int)ball.GetComponent<ColorBallScript> ().mainColor;
 					GetComponent<SpriteRenderer> ().sprite = gameObject.GetComponent<ColorBallScript> ().sprites [orginalColor - 1];
+
 					//POPSign add text to the bubbles
-					GameObject textObject = new GameObject();
-					textObject.transform.parent = ball.transform;
-					TextMesh nText = textObject.AddComponent<TextMesh>();
-					string videoName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript> ().mainColor).fileName;
-					nText.text = videoName.Substring (0, Mathf.Min(videoName.Length, 3));
-					nText.fontSize = 300;
-					nText.transform.localScale = new Vector3(0.01f, 0.01f, 0.0f);
-					nText.anchor = TextAnchor.MiddleCenter;
-					nText.alignment = TextAlignment.Center;
-					nText.transform.localPosition = new Vector3 (0f, 0f, 5.0f);
-					MeshRenderer textMesh = textObject.GetComponent<MeshRenderer>();
-					textMesh.sortingLayerName = "New Layer 1";
-					textMesh.sortingOrder = 2;
+//					GameObject textObject = new GameObject();
+//					textObject.transform.parent = ball.transform;
+//					TextMesh nText = textObject.AddComponent<TextMesh>();
+//					string videoName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript> ().mainColor).fileName;
+//					nText.text = videoName.Substring (0, Mathf.Min(videoName.Length, 3));
+//					nText.fontSize = 300;
+//					nText.transform.localScale = new Vector3(0.01f, 0.01f, 0.0f);
+//					nText.anchor = TextAnchor.MiddleCenter;
+//					nText.alignment = TextAlignment.Center;
+//					nText.transform.localPosition = new Vector3 (0f, 0f, 5.0f);
+//					MeshRenderer textMesh = textObject.GetComponent<MeshRenderer>();
+//					textMesh.sortingLayerName = "New Layer 1";
+//					textMesh.sortingOrder = 2;
+
+					//POPSign2.0 change text to images
+					GameObject imageObject = new GameObject();
+					imageObject.transform.parent = ball.transform;
+
+					RawImage ballImage = imageObject.AddComponent<RawImage> ();
+					string imageName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript> ().mainColor).imageName;
+					ballImage.texture = (Texture)Resources.Load(imageName, typeof(Texture));
+
+					// Consider the image size
+					ballImage.transform.localScale = new Vector3(2.0f, 2.0f, 0.0f);
+//					ballImage.anchor
+//					ballImage.TextAlignment
+					ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
+
+//					MeshRenderer imageMesh = imageObject.GetComponent<MeshRenderer> ();
+//					ballImage.sortingLayerName = "New Layer 1";
+//					ballImage.sortingOrder = 2;
+
 
                     launched = true;
                     rabbit.Play( "rabbit_move" );

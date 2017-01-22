@@ -2,16 +2,21 @@
 	"bluefileName":"milk",
 	"blueframeNumber":"30",
 	"bluefolderName":"Sequence/set3/milk",
+	"blueImageName":"WordIcons/milk",
 	"greenfileName":"thirsty",
 	"greenframeNumber":"42",
 	"greenfolderName":"Sequence/set3/thirsty",
+	"greenImageName":"WordIcons/thirsty",
 	"redfileName":"want",
 	"redframeNumber":"43",
 	"redfolderName":"Sequence/set3/want",
+	"redImageName":"WordIcons/want",
 	"violetfileName":"water",
 	"violetframeNumber":"41",
 	"violetfolderName":"Sequence/set3/water",
+	"violetImageName":"WordIcons/water",
 	"yellowfileName":"drink",
 	"yellowframeNumber":"33",
-	"yellowfolderName":"Sequence/set3/drink"
+	"yellowfolderName":"Sequence/set3/drink",
+	"yelloImageName": "WordIcons/drink"
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,8 +73,7 @@ public class creatorBall : MonoBehaviour
         LoadDataFromLocal(mainscript.Instance.currentLevel);
 
     }
-
-
+		
     public bool LoadDataFromLocal(int currentLevel)
     {
         //Read data from text file
@@ -435,22 +435,40 @@ public class creatorBall : MonoBehaviour
             //b.GetComponent<BoxCollider2D>().enabled = true;
 
 			//POPSign add text to the bubbles
-			GameObject textObject = new GameObject();
-			textObject.transform.parent = b.transform;
-			TextMesh nText = textObject.AddComponent<TextMesh>();
+//			GameObject textObject = new GameObject();
+//			textObject.transform.parent = b.transform;
+//			TextMesh nText = textObject.AddComponent<TextMesh>();
+//			if (b.GetComponent<ColorBallScript> ().mainColor != BallColor.chicken) {
+//				string videoName = sharedVideoManager.getVideoByColor (b.GetComponent<ColorBallScript> ().mainColor).fileName;
+//				nText.text = videoName.Substring (0, Mathf.Min(videoName.Length, 3));
+//				//			nText.font = (Font) Resources.Load("Typo_Round_Regular_Demo", typeof(Font));
+//				nText.fontSize = 30;
+//				nText.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+//				nText.anchor = TextAnchor.MiddleCenter;
+//				nText.alignment = TextAlignment.Center;
+//				nText.transform.localPosition = new Vector3 (0f, 0f, 5.0f);
+//				MeshRenderer textMesh = textObject.GetComponent<MeshRenderer>();
+//				textMesh.sortingLayerName = "New Layer 1";
+//				textMesh.sortingOrder = 2;
+//			}
+
+
+			//POPSign add image to the bubbles
+			GameObject imageObject = new GameObject();
+			imageObject.transform.parent = b.transform;
+			RawImage ballImage = imageObject.AddComponent<RawImage> ();
 			if (b.GetComponent<ColorBallScript> ().mainColor != BallColor.chicken) {
-				string videoName = sharedVideoManager.getVideoByColor (b.GetComponent<ColorBallScript> ().mainColor).fileName;
-				nText.text = videoName.Substring (0, Mathf.Min(videoName.Length, 3));
-				//			nText.font = (Font) Resources.Load("Typo_Round_Regular_Demo", typeof(Font));
-				nText.fontSize = 30;
-				nText.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-				nText.anchor = TextAnchor.MiddleCenter;
-				nText.alignment = TextAlignment.Center;
-				nText.transform.localPosition = new Vector3 (0f, 0f, 5.0f);
-				MeshRenderer textMesh = textObject.GetComponent<MeshRenderer>();
-				textMesh.sortingLayerName = "New Layer 1";
-				textMesh.sortingOrder = 2;
+				string imageName = sharedVideoManager.getVideoByColor (b.GetComponent<ColorBallScript> ().mainColor).imageName;
+				ballImage.texture = (Texture)Resources.Load(imageName, typeof(Texture));
+
+				// Consider the image size
+				ballImage.transform.localScale = new Vector3(0.5f, 0.5f, 0.0f);
+				ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
+//				MeshRenderer imageMesh = imageObject.GetComponent<MeshRenderer> ();
+//				imageMesh.sortingLayerName = "New Layer 1";
+//				imageMesh.sortingOrder = 2;
 			}
+
         }
         return b.gameObject;
     }

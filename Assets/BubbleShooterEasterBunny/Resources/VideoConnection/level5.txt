@@ -2,16 +2,21 @@
 	"bluefileName":"hello",
 	"blueframeNumber":"33",
 	"bluefolderName":"Sequence/set1/hello",
+	"blueImageName":"WordIcons/hello",
 	"greenfileName":"where",
 	"greenframeNumber":"38",
 	"greenfolderName":"Sequence/set1/where",
+	"greenImageName":"WordIcons/where",
 	"redfileName":"my",
 	"redframeNumber":"35",
 	"redfolderName":"Sequence/set1/my",
+	"redImageName":"WordIcons/my",
 	"violetfileName":"mom",
 	"violetframeNumber":"35",
 	"violetfolderName":"Sequence/set1/mom",
+	"violetImageName":"WordIcons/mom",
 	"yellowfileName":"dad",
 	"yellowframeNumber":"41",
-	"yellowfolderName":"Sequence/set1/dad"
+	"yellowfolderName":"Sequence/set1/dad",
+	"yellowImageName":"WordIcons/dad"
 }

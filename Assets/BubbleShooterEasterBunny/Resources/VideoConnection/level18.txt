@@ -2,16 +2,21 @@
 	"bluefileName":"look",
 	"blueframeNumber":"41",
 	"bluefolderName":"Sequence/set4/look",
+	"blueImageName":"WordIcons/look",
 	"greenfileName":"toy",
 	"greenframeNumber":"49",
 	"greenfolderName":"Sequence/set4/toy",
+	"greenImageName":"WordIcons/toy",
 	"redfileName":"that",
 	"redframeNumber":"38",
 	"redfolderName":"Sequence/set4/that",
+	"redImageName":"WordIcons/that",
 	"violetfileName":"book",
 	"violetframeNumber":"49",
 	"violetfolderName":"Sequence/set4/book",
+	"violetImageName":"WordIcons/book",
 	"yellowfileName":"car",
 	"yellowframeNumber":"42",
-	"yellowfolderName":"Sequence/set4/car"
+	"yellowfolderName":"Sequence/set4/car",
+	"yellowImageName":"WordIcons/car"
 }

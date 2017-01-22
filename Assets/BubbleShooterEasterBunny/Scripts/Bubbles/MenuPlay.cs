@@ -106,7 +106,6 @@ public class MenuPlay : MonoBehaviour {
 		RawImage curtBallExample = (RawImage) GameObject.Find("ballExample").GetComponent<RawImage>();
 //		Debug.Log ("ball_" + colorNameArray [sharedVideoManager.curtVideoIndex] + "_l");
 		curtBallExample.texture = (Texture)Resources.Load("PreviewBall/ball_" + colorNameArray[sharedVideoManager.curtVideoIndex] + "_l", typeof(Texture));
-		Debug.Log ("PreviewBall/ball_" + colorNameArray [sharedVideoManager.curtVideoIndex] + "_l");
 
 		Text currentWord = (Text) GameObject.Find("CurrentWord").GetComponent<Text>();
 		currentWord.color = colArray [sharedVideoManager.curtVideoIndex];
@@ -120,11 +119,6 @@ public class MenuPlay : MonoBehaviour {
 		// Popsign_family: Change text to raw image
 		RawImage ballExampleImage = (RawImage) GameObject.Find("ballExampleImage").GetComponent<RawImage>();
 		ballExampleImage.texture = (Texture)Resources.Load(sharedVideoManager.curtVideo.imageName, typeof(Texture));
-		Debug.Log (ballExampleImage);
-		Debug.Log ("========");
-		Debug.Log (sharedVideoManager.curtVideo.imageName);
-		Debug.Log ("========");
-		Debug.Log (ballExampleImage.texture);
 
 //
 //		Transform[] ts = gameObject.transform.GetComponentsInChildren<Transform>(true);
