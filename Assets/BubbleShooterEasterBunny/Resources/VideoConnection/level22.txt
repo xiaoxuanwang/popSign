@@ -1,0 +1,17 @@
+{
+	"bluefileName":"stop",
+	"blueframeNumber":"37",
+	"bluefolderName":"Sequence/set5/stop",
+	"greenfileName":"careful",
+	"greenframeNumber":"34",
+	"greenfolderName":"Sequence/set5/careful",
+	"redfileName":"hot",
+	"redframeNumber":"35",
+	"redfolderName":"Sequence/set5/hot",
+	"violetfileName":"soap",
+	"violetframeNumber":"47",
+	"violetfolderName":"Sequence/set5/soap",
+	"yellowfileName":"yesterday",
+	"yellowframeNumber":"38",
+	"yellowfolderName":"Sequence/set5/yesterday"
+}

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{78CF6D44-6B4F-EF2C-BFF2-CAB770AC02F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\Android\OpenIAB_Android.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\IOpenIAB.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\Inventory.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\JSON.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\OpenIAB.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\OpenIABEventManager.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\Options.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\OptionsVerifyMode.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\Purchase.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\SearchStrategy.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\SkuDetails.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\WP8\OpenIAB_WP8.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\OpenIAB\iOS\OpenIAB_iOS.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Plugins\Pixelplacement\iTween\iTween.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\AutoDestroy.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\Bug.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\ButtonX.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\ColorBallScript.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\DrawLine.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\GamePlay.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\Grid.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\LevelData.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\LinePoint.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\LockLevelRounded.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\MenuPlay.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\Mission.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\MissionManager.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\MoveUp.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\Pot.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\RabbitAnim.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\RemainLine.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\SmoothMove.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\SoundBase.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\TargetIcon.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\TutorialMenu.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\ball.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\bonus.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\bouncer.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\butterfly.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\creatorBall.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\creatorButterFly.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Bubbles\mainscript.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Effects\Gradient.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Effects\HotPot.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\AnimationManager.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\BoostShop.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\Counter.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\LIFESAddCounter.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\Level.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\MapLevelNumber.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\Offlineleadboard.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\ParticleSorting.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\Perfect.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\PreTutorial.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\ProgressBarScript.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\SelectLevels.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\Slot.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\SoundParticle.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\GUI\Tutorial.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\INAPP.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\InitScript.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\LevelEditorBase.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\Video.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\VideoManager.cs" />
+     <Compile Include="Assets\BubbleShooterEasterBunny\Scripts\map.cs" />
+     <Compile Include="Assets\FramesToVideo\Scripts\ImageSequenceSingleTexture.cs" />
+     <Compile Include="Assets\FramesToVideo\Scripts\PreviewVideoSwitcher.cs" />
+     <None Include="Assets\BubbleShooterEasterBunny\Fonts\fontdinerdotcom2.fnt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\13.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\20.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\30.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\10.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\21.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\27.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level20.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level21.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level33.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level24.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\1.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\25.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level37.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level17.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level26.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\16.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level5.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\19.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level10.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\Video2.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\23.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Fonts\digitals.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level32.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Fonts\cooper.fnt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\2.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\31.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\22.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\12.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Textures\Font\helvetica.fnt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\28.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\14.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level14.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\7.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\Video3.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level23.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\Video1.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\BubbleShooterEasterBunny\Fonts\fontdinerdotcom1.fnt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\29.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level8.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level40.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\4.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level38.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level28.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level25.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level1.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level9.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level12.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\18.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level16.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level30.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level39.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\26.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level11.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level18.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level34.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\32.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level15.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level2.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level3.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level27.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\4.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\11.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\15.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level13.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level19.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\6.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level22.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level7.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\17.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\3.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\8.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level31.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\24.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level29.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level35.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\9.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Plugins\Android\AndroidManifest_BACKUP.xml" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level6.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level36.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Textures\Font\goonies.fnt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\VideoConnection\level4.txt" />
+     <None Include="Assets\BubbleShooterEasterBunny\Resources\Levels\5.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>/Users/cherylwang/Documents/asl/PopSign/Latest Version of Popsign/POPSign2_Unity/Assets/BubbleShooterEasterBunny/Plugins/LitJson.dll</HintPath>
+ </Reference>
+ <Reference Include="OpenIAB_W8Plugin">
+ <HintPath>/Users/cherylwang/Documents/asl/PopSign/Latest Version of Popsign/POPSign2_Unity/Assets/BubbleShooterEasterBunny/Plugins/OpenIAB_W8Plugin.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

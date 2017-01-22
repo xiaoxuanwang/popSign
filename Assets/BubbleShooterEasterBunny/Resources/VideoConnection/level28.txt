@@ -1,0 +1,17 @@
+{
+	"bluefileName":"apple",
+	"blueframeNumber":"42",
+	"bluefolderName":"Sequence/set6/apple",
+	"greenfileName":"banana",
+	"greenframeNumber":"53",
+	"greenfolderName":"Sequence/set6/banana",
+	"redfileName":"sweet",
+	"redframeNumber":"37",
+	"redfolderName":"Sequence/set6/sweet",
+	"violetfileName":"juice",
+	"violetframeNumber":"42",
+	"violetfolderName":"Sequence/set6/juice",
+	"yellowfileName":"medicine",
+	"yellowframeNumber":"48",
+	"yellowfolderName":"Sequence/set6/medicine"
+}

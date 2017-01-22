@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{CB5055AB-EAC7-3E34-5717-E1FD0B9B2D0C}") = "POPSign2_Unity", "Assembly-CSharp.csproj", "{78CF6D44-6B4F-EF2C-BFF2-CAB770AC02F2}"
+EndProject
+Project("{CB5055AB-EAC7-3E34-5717-E1FD0B9B2D0C}") = "POPSign2_Unity", "Assembly-CSharp-Editor.csproj", "{29D5809D-9F52-4A7E-1350-0F6544557B06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78CF6D44-6B4F-EF2C-BFF2-CAB770AC02F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CF6D44-6B4F-EF2C-BFF2-CAB770AC02F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CF6D44-6B4F-EF2C-BFF2-CAB770AC02F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CF6D44-6B4F-EF2C-BFF2-CAB770AC02F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D5809D-9F52-4A7E-1350-0F6544557B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D5809D-9F52-4A7E-1350-0F6544557B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D5809D-9F52-4A7E-1350-0F6544557B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D5809D-9F52-4A7E-1350-0F6544557B06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

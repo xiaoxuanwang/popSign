@@ -1,0 +1,17 @@
+﻿{
+	"bluefileName":"book",
+	"blueframeNumber":"49",
+	"bluefolderName":"Sequence/miscNouns/book",
+	"greenfileName":"toy",
+	"greenframeNumber":"49",
+	"greenfolderName":"Sequence/miscNouns/toy",
+	"redfileName":"medicine",
+	"redframeNumber":"48",
+	"redfolderName":"Sequence/miscNouns/medicine",
+	"violetfileName":"water",
+	"violetframeNumber":"41",
+	"violetfolderName":"Sequence/miscNouns/water",
+	"yellowfileName":"soap",
+	"yellowframeNumber":"47",
+	"yellowfolderName":"Sequence/miscNouns/soap"
+}

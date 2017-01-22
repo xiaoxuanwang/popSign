@@ -1,0 +1,17 @@
+{
+	"bluefileName":"go",
+	"blueframeNumber":"",
+	"bluefolderName":"Sequence/set8/go",
+	"greenfileName":"now",
+	"greenframeNumber":"39",
+	"greenfolderName":"Sequence/set8/now",
+	"redfileName":"bathroom",
+	"redframeNumber":"45",
+	"redfolderName":"Sequence/set8/bathroom",
+	"violetfileName":"home",
+	"violetframeNumber":"37",
+	"violetfolderName":"Sequence/set8/home",
+	"yellowfileName":"school",
+	"yellowframeNumber":"30",
+	"yellowfolderName":"Sequence/set8/school"
+}

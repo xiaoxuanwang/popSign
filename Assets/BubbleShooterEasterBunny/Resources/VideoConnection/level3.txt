@@ -1,0 +1,17 @@
+{
+	"bluefileName":"hello",
+	"blueframeNumber":"33",
+	"bluefolderName":"Sequence/set1/hello",
+	"greenfileName":"where",
+	"greenframeNumber":"38",
+	"greenfolderName":"Sequence/set1/where",
+	"redfileName":"my",
+	"redframeNumber":"35",
+	"redfolderName":"Sequence/set1/my",
+	"violetfileName":"mom",
+	"violetframeNumber":"35",
+	"violetfolderName":"Sequence/set1/mom",
+	"yellowfileName":"dad",
+	"yellowframeNumber":"41",
+	"yellowfolderName":"Sequence/set1/dad"
+}

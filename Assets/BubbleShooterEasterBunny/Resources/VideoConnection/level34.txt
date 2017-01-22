@@ -1,0 +1,17 @@
+{
+	"bluefileName":"eat",
+	"blueframeNumber":"42",
+	"bluefolderName":"Sequence/set7/eat",
+	"greenfileName":"more",
+	"greenframeNumber":"42",
+	"greenfolderName":"Sequence/set7/more",
+	"redfileName":"hungry",
+	"redframeNumber":"34",
+	"redfolderName":"Sequence/set7/hungry",
+	"violetfileName":"food",
+	"violetframeNumber":"39",
+	"violetfolderName":"Sequence/set7/food",
+	"yellowfileName":"please",
+	"yellowframeNumber":"42",
+	"yellowfolderName":"Sequence/set7/please"
+}
