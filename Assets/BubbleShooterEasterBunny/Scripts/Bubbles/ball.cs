@@ -192,19 +192,25 @@ public class ball : MonoBehaviour
 					GameObject imageObject = new GameObject();
 					imageObject.transform.parent = ball.transform;
 
-					RawImage ballImage = imageObject.AddComponent<RawImage> ();
-					string imageName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript> ().mainColor).imageName;
-					ballImage.texture = (Texture)Resources.Load(imageName, typeof(Texture));
+					SpriteRenderer ballImage = imageObject.AddComponent<SpriteRenderer> ();
+					string imageName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript>().mainColor).imageName;
+					ballImage.sprite = (Sprite)Resources.Load(imageName, typeof(Sprite));
+					ballImage.sortingLayerName = "New Layer 1";
+					ballImage.sortingOrder = 2;
+
+//					RawImage ballImage = imageObject.AddComponent<RawImage> ();
+//					string imageName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript> ().mainColor).imageName;
+//					ballImage.texture = (Texture)Resources.Load(imageName, typeof(Texture));
 
 					// Consider the image size
-					ballImage.transform.localScale = new Vector3(2.0f, 2.0f, 0.0f);
+					ballImage.transform.localScale = new Vector3(0.35f, 0.35f, 0.0f);
 //					ballImage.anchor
 //					ballImage.TextAlignment
 					ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
 
-//					MeshRenderer imageMesh = imageObject.GetComponent<MeshRenderer> ();
-//					ballImage.sortingLayerName = "New Layer 1";
-//					ballImage.sortingOrder = 2;
+//					MeshRenderer imageMesh = imageObject.AddComponent<MeshRenderer> ();
+//					imageMesh.sortingLayerName = "New Layer 1";
+//					imageMesh.sortingOrder = 2;
 
 
                     launched = true;

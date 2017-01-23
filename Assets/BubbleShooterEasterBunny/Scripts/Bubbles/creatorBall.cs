@@ -456,15 +456,17 @@ public class creatorBall : MonoBehaviour
 			//POPSign add image to the bubbles
 			GameObject imageObject = new GameObject();
 			imageObject.transform.parent = b.transform;
-			RawImage ballImage = imageObject.AddComponent<RawImage> ();
+			SpriteRenderer ballImage = imageObject.AddComponent<SpriteRenderer> ();
 			if (b.GetComponent<ColorBallScript> ().mainColor != BallColor.chicken) {
 				string imageName = sharedVideoManager.getVideoByColor (b.GetComponent<ColorBallScript> ().mainColor).imageName;
-				ballImage.texture = (Texture)Resources.Load(imageName, typeof(Texture));
+				ballImage.sprite = (Sprite)Resources.Load(imageName, typeof(Sprite));
+				ballImage.sortingLayerName = "New Layer 1";
+				ballImage.sortingOrder = 2;
 
 				// Consider the image size
-				ballImage.transform.localScale = new Vector3(0.5f, 0.5f, 0.0f);
+				ballImage.transform.localScale = new Vector3(0.35f, 0.35f, 0.0f);
 				ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
-//				MeshRenderer imageMesh = imageObject.GetComponent<MeshRenderer> ();
+//				MeshRenderer imageMesh = imageObject.AddComponent<MeshRenderer> ();
 //				imageMesh.sortingLayerName = "New Layer 1";
 //				imageMesh.sortingOrder = 2;
 			}
