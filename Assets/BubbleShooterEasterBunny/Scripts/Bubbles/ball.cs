@@ -203,7 +203,7 @@ public class ball : MonoBehaviour
 //					ballImage.texture = (Texture)Resources.Load(imageName, typeof(Texture));
 
 					// Consider the image size
-					ballImage.transform.localScale = new Vector3(0.35f, 0.35f, 0.0f);
+					ballImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.0f);
 //					ballImage.anchor
 //					ballImage.TextAlignment
 					ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);

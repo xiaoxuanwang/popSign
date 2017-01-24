@@ -1,11 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BubbleShooterEasterBunny/Scripts/Bubbles/AutoDestroy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BubbleShooterEasterBunny/Resources/VideoConnection/level1.txt">
     <Files>
+      <File FileName="Assets/BubbleShooterEasterBunny/Scripts/Bubbles/ball.cs" Line="207" Column="24" />
+      <File FileName="Assets/BubbleShooterEasterBunny/Scripts/Bubbles/creatorBall.cs" Line="467" Column="60" />
       <File FileName="Assets/BubbleShooterEasterBunny/Scripts/Bubbles/AutoDestroy.cs" Line="1" Column="1" />
       <File FileName="Assets/BubbleShooterEasterBunny/Scripts/Bubbles/GamePlay.cs" Line="1" Column="1" />
       <File FileName="Assets/BubbleShooterEasterBunny/Scripts/Bubbles/mainscript.cs" Line="1" Column="1" />
       <File FileName="Assets/BubbleShooterEasterBunny/Scripts/GUI/AnimationManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/BubbleShooterEasterBunny/Resources/VideoConnection/level1.txt" Line="19" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
