@@ -17922,7 +17922,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1850370014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2008326566}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1850370014
@@ -18763,12 +18774,12 @@ GameObject:
   - component: {fileID: 2008326567}
   - component: {fileID: 2008326568}
   m_Layer: 5
-  m_Name: New Sprite (1)
+  m_Name: helpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2008326567
 Transform:
   m_ObjectHideFlags: 0
@@ -18776,8 +18787,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2008326566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 217, y: -65, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalPosition: {x: -0, y: -655, z: -10472}
+  m_LocalScale: {x: 55.6, y: 55.6, z: 1}
   m_Children: []
   m_Father: {fileID: 354244034}
   m_RootOrder: 26
@@ -18811,10 +18822,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 0.7294118, g: 0.5137255, b: 0.91764706, a: 1}
+  m_SortingLayerID: -1414487041
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: b9de529f7cc814fb196a7515285ad5b3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1 &2009758102
