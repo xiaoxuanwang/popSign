@@ -21,7 +21,9 @@ public class PreviewVideoSwitcher : MonoBehaviour
 	public string imageSequenceName;
 	//The number of frames the animation has
 	public int numberOfFrames;
-	
+
+	// Help text image to display
+	public GameObject helpTextImageObject;
 	//The base name of the files of the sequence
 	private string baseName;
 
@@ -45,9 +47,8 @@ public class PreviewVideoSwitcher : MonoBehaviour
 
 			// Popsign set initial word for help text
 			// POPSign add image to video caption as help text
-			GameObject helpTextImageObject = GameObject.Find ("helpTextImage");
 			if (helpTextImageObject) {
-				SpriteRenderer helpTextImage = helpTextImageObject.AddComponent<SpriteRenderer> ();
+				SpriteRenderer helpTextImage = helpTextImageObject.GetComponent<SpriteRenderer> ();
 				helpTextImage.sortingLayerName = "UI layer";
 				helpTextImage.sortingOrder = 3;
 				string textImageName = this.sharedVideoManager.curtVideo.imageName;
@@ -78,8 +79,7 @@ public class PreviewVideoSwitcher : MonoBehaviour
 			if (this.baseName != "") {
 				texture = (Texture)Resources.Load (baseName + "", typeof(Texture));
 
-				// Update help text
-				GameObject helpTextImageObject = GameObject.Find ("helpTextImage");
+				// PopSign Update help text
 				if (helpTextImageObject) {
 					SpriteRenderer helpTextImage = helpTextImageObject.GetComponent<SpriteRenderer> ();
 
