@@ -466,9 +466,6 @@ public class creatorBall : MonoBehaviour
 				// Consider the image size
 				ballImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.0f);
 				ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
-//				MeshRenderer imageMesh = imageObject.AddComponent<MeshRenderer> ();
-//				imageMesh.sortingLayerName = "New Layer 1";
-//				imageMesh.sortingOrder = 2;
 			}
 
         }

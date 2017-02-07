@@ -156,11 +156,12 @@ public class ball : MonoBehaviour
 				//POPSign when click the screen it should change Video
 				sharedVideoManager.curtVideo = ballVideo;
 				sharedVideoManager.shouldChangeVideo = true;
-				//Debug.Log (sharedVideoManager.curtVideo.fileName);
+//				Debug.Log (sharedVideoManager.curtVideo.fileName);
 			}
+				
 		}
 
-        if( Input.GetMouseButtonUp( 0 ) )
+        if( Input.GetMouseButtonUp( 0 ) ) // Pressed left click
         {
             GameObject ball = gameObject;
             if( !ClickOnGUI(Input.mousePosition) && !launched && !ball.GetComponent<ball>().setTarget && mainscript.Instance.newBall2 == null /*&& mainscript.Instance.newBall == null*/ && newBall && !Camera.main.GetComponent<mainscript>().gameOver && ( GamePlay.Instance.GameStatus == GameState.Playing || GamePlay.Instance.GameStatus == GameState.WaitForChicken ) )

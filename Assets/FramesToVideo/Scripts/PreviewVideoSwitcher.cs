@@ -42,6 +42,23 @@ public class PreviewVideoSwitcher : MonoBehaviour
 		//set the initial frame as the first texture. Load it from the first image on the folder
 		if (baseName != "") {
 			texture = (Texture)Resources.Load(baseName + "", typeof(Texture));
+
+			// Popsign set initial word for help text
+			// POPSign add image to video caption as help text
+			GameObject helpTextImageObject = GameObject.Find ("helpTextImage");
+			if (helpTextImageObject) {
+				SpriteRenderer helpTextImage = helpTextImageObject.AddComponent<SpriteRenderer> ();
+				helpTextImage.sortingLayerName = "UI layer";
+				helpTextImage.sortingOrder = 3;
+				string textImageName = this.sharedVideoManager.curtVideo.imageName;
+
+				Debug.Log (textImageName);
+
+				helpTextImage.sprite = (Sprite)Resources.Load (textImageName, typeof(Sprite));
+				// Consider the image size
+				helpTextImage.transform.localScale = new Vector3 (0.5f, 0.5f, 0.0f);
+				helpTextImage.transform.localPosition = new Vector3 (0f, 0f, 0f);
+			}
 		}
 	}
 	
@@ -60,6 +77,24 @@ public class PreviewVideoSwitcher : MonoBehaviour
 			this.baseName = this.folderName + "/" + this.imageSequenceName;
 			if (this.baseName != "") {
 				texture = (Texture)Resources.Load (baseName + "", typeof(Texture));
+
+				// Update help text
+				GameObject helpTextImageObject = GameObject.Find ("helpTextImage");
+				if (helpTextImageObject) {
+					SpriteRenderer helpTextImage = helpTextImageObject.GetComponent<SpriteRenderer> ();
+
+					if (helpTextImage == null) {
+						helpTextImage = helpTextImageObject.AddComponent<SpriteRenderer> ();
+						helpTextImage.sortingLayerName = "UI layer";
+						helpTextImage.sortingOrder = 3;
+					}
+
+					string textImageName = this.sharedVideoManager.curtVideo.imageName;
+					Debug.Log (textImageName);
+					helpTextImage.sprite = (Sprite)Resources.Load (textImageName, typeof(Sprite));
+					helpTextImage.transform.localScale = new Vector3 (0.5f, 0.5f, 0.0f);
+					helpTextImage.transform.localPosition = new Vector3 (0f, 0f, 0f);
+				}
 			}
 
 			sharedVideoManager.shouldChangeVideo = false;
