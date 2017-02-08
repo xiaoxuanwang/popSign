@@ -6,12 +6,14 @@ public class Video {
 	public string fileName;
 	public string folderName;
 	public string imageName;
+	public BallColor color;
 
-	public Video(int _frameNumber, string _fileName, string _folderName, string _imageName) {
+	public Video(int _frameNumber, string _fileName, string _folderName, string _imageName, BallColor _color) {
 		frameNumber = _frameNumber;
 		fileName = _fileName;
 		folderName = _folderName;
 		imageName = _imageName;
+		color = _color;
 	}
 
 	// Use this for initialization

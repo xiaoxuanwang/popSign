@@ -24,6 +24,10 @@ public class PreviewVideoSwitcher : MonoBehaviour
 
 	// Help text image to display
 	public GameObject helpTextImageObject;
+
+	// Help text background
+	public GameObject helpTextObject;
+
 	//The base name of the files of the sequence
 	private string baseName;
 
@@ -52,13 +56,17 @@ public class PreviewVideoSwitcher : MonoBehaviour
 				helpTextImage.sortingLayerName = "UI layer";
 				helpTextImage.sortingOrder = 3;
 				string textImageName = this.sharedVideoManager.curtVideo.imageName;
-
-				Debug.Log (textImageName);
-
 				helpTextImage.sprite = (Sprite)Resources.Load (textImageName, typeof(Sprite));
 				// Consider the image size
 				helpTextImage.transform.localScale = new Vector3 (0.5f, 0.5f, 0.0f);
 				helpTextImage.transform.localPosition = new Vector3 (0f, 0f, 0f);
+
+				//set background color the same as the ball
+				SpriteRenderer helpTextBG = helpTextObject.GetComponent<SpriteRenderer> ();
+				BallColor color = this.sharedVideoManager.curtVideo.color;
+				string bgName = "VideoCaption/rect_" + color;
+				helpTextBG.sprite = (Sprite)Resources.Load (bgName, typeof(Sprite));
+				
 			}
 		}
 	}
@@ -90,10 +98,15 @@ public class PreviewVideoSwitcher : MonoBehaviour
 					}
 
 					string textImageName = this.sharedVideoManager.curtVideo.imageName;
-					Debug.Log (textImageName);
 					helpTextImage.sprite = (Sprite)Resources.Load (textImageName, typeof(Sprite));
 					helpTextImage.transform.localScale = new Vector3 (0.5f, 0.5f, 0.0f);
 					helpTextImage.transform.localPosition = new Vector3 (0f, 0f, 0f);
+
+					SpriteRenderer helpTextBG = helpTextObject.GetComponent<SpriteRenderer> ();
+					BallColor color = this.sharedVideoManager.curtVideo.color;
+					string bgName = "VideoCaption/rect_" + color;
+					helpTextBG.sprite = (Sprite)Resources.Load (bgName, typeof(Sprite));
+
 				}
 			}
 

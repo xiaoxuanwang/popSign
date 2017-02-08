@@ -52,7 +52,7 @@ public class VideoManager {
 			string frameNumber = jd[color + "frameNumber"] + "";
 			string imageName = jd [color + "ImageName"] + "";
 			if (fileName != "" && folderName != "" && frameNumber != "" && imageName != "") {
-				videoList.Add(new Video (int.Parse (frameNumber), fileName, folderName, imageName));
+				videoList.Add(new Video (int.Parse (frameNumber), fileName, folderName, imageName, color));
 			}
 		}
 

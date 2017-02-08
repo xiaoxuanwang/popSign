@@ -11222,6 +11222,7 @@ MonoBehaviour:
   imageSequenceName: 
   numberOfFrames: 0
   helpTextImageObject: {fileID: 2117083745}
+  helpTextObject: {fileID: 2008326566}
 --- !u!1001 &1365518177
 Prefab:
   m_ObjectHideFlags: 0
