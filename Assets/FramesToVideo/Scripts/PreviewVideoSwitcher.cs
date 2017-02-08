@@ -109,8 +109,6 @@ public class PreviewVideoSwitcher : MonoBehaviour
 
 					// Hide the hint when change the word
 					helpTextObject.SetActive (false);
-					Debug.Log (helpTextObject.activeSelf);
-					Debug.Log ("Should be inactive");
 
 				}
 			}
