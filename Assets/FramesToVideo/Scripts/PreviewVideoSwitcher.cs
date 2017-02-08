@@ -107,6 +107,11 @@ public class PreviewVideoSwitcher : MonoBehaviour
 					string bgName = "VideoCaption/rect_" + color;
 					helpTextBG.sprite = (Sprite)Resources.Load (bgName, typeof(Sprite));
 
+					// Hide the hint when change the word
+					helpTextObject.SetActive (false);
+					Debug.Log (helpTextObject.activeSelf);
+					Debug.Log ("Should be inactive");
+
 				}
 			}
 
