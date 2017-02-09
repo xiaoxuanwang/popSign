@@ -2,16 +2,21 @@
 	"bluefileName":"eat",
 	"blueframeNumber":"42",
 	"bluefolderName":"Sequence/set7/eat",
+	"blueImageName":"WordIcons/eat",
 	"greenfileName":"more",
 	"greenframeNumber":"42",
 	"greenfolderName":"Sequence/set7/more",
+	"greenImageName":"WordIcons/more",
 	"redfileName":"hungry",
 	"redframeNumber":"34",
 	"redfolderName":"Sequence/set7/hungry",
+	"redImageName":"WordIcons/hungry",
 	"violetfileName":"food",
 	"violetframeNumber":"39",
 	"violetfolderName":"Sequence/set7/food",
+	"violetImageName":"WordIcons/food",
 	"yellowfileName":"please",
 	"yellowframeNumber":"42",
-	"yellowfolderName":"Sequence/set7/please"
+	"yellowfolderName":"Sequence/set7/please",
+	"yellowImageName":"WordIcons/please"
 }

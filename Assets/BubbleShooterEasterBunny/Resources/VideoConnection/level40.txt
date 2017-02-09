@@ -1,17 +1,22 @@
 {
 	"bluefileName":"go",
-	"blueframeNumber":"",
+	"blueframeNumber":"36",
 	"bluefolderName":"Sequence/set8/go",
+	"blueImageName":"WordIcons/go",
 	"greenfileName":"now",
 	"greenframeNumber":"39",
 	"greenfolderName":"Sequence/set8/now",
-	"redfileName":"bathroom",
-	"redframeNumber":"45",
-	"redfolderName":"Sequence/set8/bathroom",
+	"greenImageName":"WordIcons/now",
+	"redfileName":"good",
+	"redframeNumber":"41",
+	"redfolderName":"Sequence/set8/good",
+	"redImageName":"WordIcons/good",
 	"violetfileName":"home",
 	"violetframeNumber":"37",
 	"violetfolderName":"Sequence/set8/home",
+	"violetImageName":"WordIcons/home",
 	"yellowfileName":"school",
 	"yellowframeNumber":"30",
-	"yellowfolderName":"Sequence/set8/school"
+	"yellowfolderName":"Sequence/set8/school",
+	"yellowImageName":"WordIcons/school"
 }
