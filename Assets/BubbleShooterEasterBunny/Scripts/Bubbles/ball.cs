@@ -194,24 +194,13 @@ public class ball : MonoBehaviour
 					imageObject.transform.parent = ball.transform;
 
 					SpriteRenderer ballImage = imageObject.AddComponent<SpriteRenderer> ();
+					// Consider the image size
+					ballImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.0f);
+					ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
 					string imageName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript>().mainColor).imageName;
 					ballImage.sprite = (Sprite)Resources.Load(imageName, typeof(Sprite));
 					ballImage.sortingLayerName = "New Layer 1";
 					ballImage.sortingOrder = 2;
-
-//					RawImage ballImage = imageObject.AddComponent<RawImage> ();
-//					string imageName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript> ().mainColor).imageName;
-//					ballImage.texture = (Texture)Resources.Load(imageName, typeof(Texture));
-
-					// Consider the image size
-					ballImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.0f);
-//					ballImage.anchor
-//					ballImage.TextAlignment
-					ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
-
-//					MeshRenderer imageMesh = imageObject.AddComponent<MeshRenderer> ();
-//					imageMesh.sortingLayerName = "New Layer 1";
-//					imageMesh.sortingOrder = 2;
 
 
                     launched = true;
