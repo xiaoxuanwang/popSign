@@ -15,6 +15,7 @@ public class Level : MonoBehaviour {
 	void Start () {
         if( PlayerPrefs.GetInt( "Score" + (number-1) ) > 0 || number == 1 )
         {
+			Debug.Log (PlayerPrefs.GetInt ("Score" + (number - 1)));
             lockimage.gameObject.SetActive( false );
             label.text = "" + number;
         }

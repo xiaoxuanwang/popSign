@@ -104,6 +104,15 @@ namespace InitScriptName
                 PlayerPrefs.SetInt("Lauched", 1);
                 PlayerPrefs.SetInt("Music", 1);
                 PlayerPrefs.SetInt("Sound", 1);
+
+				// PopSign: set tutorial preference
+				// Add if condition after debugging
+//				if (!PlayerPrefs.HasKey ("Tutorial")) {
+//					PlayerPrefs.SetInt ("Tutorial", 1);
+//				} else {
+					PlayerPrefs.SetInt ("Tutorial", 0);
+//				}
+
                 PlayerPrefs.Save();
             }
 

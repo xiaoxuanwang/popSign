@@ -5061,6 +5061,8 @@ MonoBehaviour:
   folderName: 
   imageSequenceName: 
   numberOfFrames: 0
+  helpTextImageObject: {fileID: 0}
+  helpTextObject: {fileID: 0}
 --- !u!114 &1293710038
 MonoBehaviour:
   m_ObjectHideFlags: 0
