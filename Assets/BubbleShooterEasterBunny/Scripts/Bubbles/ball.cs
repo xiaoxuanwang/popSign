@@ -84,7 +84,8 @@ public class ball : MonoBehaviour
     private bool animStarted;
 
 	//POPSign Shared Video Manager
-	private VideoManager sharedVideoManager = VideoManager.getVideoManager();
+	private VideoManager sharedVideoManager;// = VideoManager.getVideoManager();
+
 
     public int HitBug1
     {
@@ -95,12 +96,14 @@ public class ball : MonoBehaviour
                 HitBug = value;
         }
     }
+		
 
     // Use this for initialization
     void Start()
     {
         rabbit = GameObject.Find( "Rabbit" ).gameObject.GetComponent<Animation>();
         meshPos = new Vector3( -1000, -1000, -10 );
+
         //  sprite = GetComponent<OTSprite>();
         //sprite.passive = true;
         //	sprite.onCollision = OnCollision;
@@ -121,6 +124,7 @@ public class ball : MonoBehaviour
 
 		//POPSign using the gray bubble instead of colorful bubbles.
 		GetComponent<SpriteRenderer> ().sprite = gameObject.GetComponent<ColorBallScript> ().sprites [6];
+		sharedVideoManager = VideoManager.getVideoManager ();
 	}
 
     IEnumerator AllowLaunchBall()
@@ -145,17 +149,18 @@ public class ball : MonoBehaviour
     void Update()
     {
 		//POPSign detect whether current ball is same with current video
+		Debug.Log(sharedVideoManager);
 		if(!launched && !gameObject.GetComponent<ball>().setTarget && 
 				mainscript.Instance.newBall2 == null /*&& mainscript.Instance.newBall == null*/ && 
 				newBall && !Camera.main.GetComponent<mainscript>().gameOver && 
 				( GamePlay.Instance.GameStatus == GameState.Playing || 
 				GamePlay.Instance.GameStatus == GameState.WaitForChicken ) ) 
 		{
-			Video ballVideo = sharedVideoManager.getVideoByColor (gameObject.GetComponent<ColorBallScript> ().mainColor);
-			if (sharedVideoManager.curtVideo == null || sharedVideoManager.curtVideo.fileName != ballVideo.fileName) {
+			Video ballVideo = this.sharedVideoManager.getVideoByColor (gameObject.GetComponent<ColorBallScript> ().mainColor);
+			if (this.sharedVideoManager.curtVideo == null || this.sharedVideoManager.curtVideo.fileName != ballVideo.fileName) {
 				//POPSign when click the screen it should change Video
-				sharedVideoManager.curtVideo = ballVideo;
-				sharedVideoManager.shouldChangeVideo = true;
+				this.sharedVideoManager.curtVideo = ballVideo;
+				this.sharedVideoManager.shouldChangeVideo = true;
 //				Debug.Log (sharedVideoManager.curtVideo.fileName);
 			}
 				
@@ -197,7 +202,7 @@ public class ball : MonoBehaviour
 					// Consider the image size
 					ballImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.0f);
 					ballImage.transform.localPosition = new Vector3(0f, 0f, 5.0f);
-					string imageName = sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript>().mainColor).imageName;
+					string imageName = this.sharedVideoManager.getVideoByColor (ball.GetComponent<ColorBallScript>().mainColor).imageName;
 					ballImage.sprite = (Sprite)Resources.Load(imageName, typeof(Sprite));
 					ballImage.sortingLayerName = "New Layer 1";
 					ballImage.sortingOrder = 2;
