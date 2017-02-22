@@ -9,6 +9,14 @@ public class PreviewVideoSwitcher : MonoBehaviour
 	//With this Material object, a reference to the game object Material can be stored
 	//private Material goMaterial;
 
+	private string[] colorNameArray = new string[] {
+		"blue",   // 0
+		"green",  // 1
+		"red",    // 2
+		"violet", // 3
+		"yellow"  // 4
+	};
+
 	//Gets the raw image
 	private RawImage img;
 
@@ -46,10 +54,10 @@ public class PreviewVideoSwitcher : MonoBehaviour
 	void Start () 
 	{
 		//set the initial frame as the first texture. Load it from the first image on the folder
-		Debug.Log(sharedVideoManager.curtVideo.imageName);
+//		Debug.Log(sharedVideoManager.curtVideo.imageName);
+		changeMenuPlayVideo ();
 		if (baseName != "") {
 			texture = (Texture)Resources.Load(baseName + "", typeof(Texture));
-			Debug.Log ("In Start: " + baseName);
 
 			// Popsign set initial word for help text
 			// POPSign add image to video caption as help text
@@ -120,9 +128,9 @@ public class PreviewVideoSwitcher : MonoBehaviour
 			//Start the 'PlayLoop' method as a coroutine with a 0.04 delay  
 			StartCoroutine("PlayLoop", 0.04f);
 			//Set the material's texture to the current value of the frameCounter variable
-//			if (this.texture != null) {
+			if (this.texture != null) {
 				img.texture = this.texture;
-//			} 
+			} 
 		}
 	}
 	
@@ -168,4 +176,11 @@ public class PreviewVideoSwitcher : MonoBehaviour
         //Stop this coroutine  
         StopCoroutine("Play");  
     }
+
+	public void changeMenuPlayVideo() {
+		sharedVideoManager.resetCurtVideo ();
+		sharedVideoManager.shouldChangeVideo = true;
+
+	}
+
 }

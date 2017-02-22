@@ -149,7 +149,6 @@ public class ball : MonoBehaviour
     void Update()
     {
 		//POPSign detect whether current ball is same with current video
-		Debug.Log(sharedVideoManager);
 		if(!launched && !gameObject.GetComponent<ball>().setTarget && 
 				mainscript.Instance.newBall2 == null /*&& mainscript.Instance.newBall == null*/ && 
 				newBall && !Camera.main.GetComponent<mainscript>().gameOver && 

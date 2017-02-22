@@ -19,6 +19,9 @@ public class MenuPlay : MonoBehaviour {
 		new Color(1.0F , 0.80F, 0.02F, 1.0F)}; // yellow
 
 	void Awake () {
+		// PopSign debug purpose
+//		PlayerPrefs.DeleteAll(); // clear player prefs for testing purpose
+
 	}
 
 	// Use this for initialization
