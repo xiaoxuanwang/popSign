@@ -40,7 +40,12 @@ public class VideoManager {
 		//int currentLevel = mainscript.Instance.currentLevel;
 		int currentLevel = PlayerPrefs.GetInt("OpenLevel");
 //		Debug.Log ("current level is " + currentLevel);
-		TextAsset textReader = Resources.Load("VideoConnection/" + "level" + currentLevel ) as TextAsset;
+
+		//PopSign: randomize mapping
+		int randomLevel = UnityEngine.Random.Range(1, 41); // return a random number from 1 to 40
+		Debug.Log("Random level is " + randomLevel);
+//		TextAsset textReader = Resources.Load("VideoConnection/" + "level" + currentLevel ) as TextAsset;
+		TextAsset textReader = Resources.Load("VideoConnection/" + "level" + randomLevel ) as TextAsset;
 		JsonData jd = JsonMapper.ToObject(textReader.text);
 
 		foreach(BallColor color in Enum.GetValues(typeof(BallColor))) {
