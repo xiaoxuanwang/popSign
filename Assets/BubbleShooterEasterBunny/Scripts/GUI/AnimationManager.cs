@@ -319,6 +319,16 @@ public class AnimationManager : MonoBehaviour
         else menuSettings.SetActive( false );
     }
 
+	//show logs
+	public void ShowLogs(GameObject logSetting)
+	{
+		SoundBase.Instance.GetComponent<AudioSource> ().PlayOneShot (SoundBase.Instance.click);
+		if (!logSetting.activeSelf) {
+			logSetting.SetActive (true);
+		} else
+			logSetting.SetActive (false);
+	}
+
     public void SoundOff( GameObject Off )
     {
         if( !Off.activeSelf )
