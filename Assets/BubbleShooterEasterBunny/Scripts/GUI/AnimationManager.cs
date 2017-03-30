@@ -325,8 +325,31 @@ public class AnimationManager : MonoBehaviour
 		SoundBase.Instance.GetComponent<AudioSource> ().PlayOneShot (SoundBase.Instance.click);
 		if (!logSetting.activeSelf) {
 			logSetting.SetActive (true);
-		} else
+			Text dateText = (Text) GameObject.Find("dateText").GetComponent<Text>();
+
+			string textContent = "No log info";
+
+			if (PlayerPrefs.HasKey ("PlayDates")) {
+				string datesStr = PlayerPrefs.GetString ("PlayDates");
+				string[] dates = datesStr.Split (',');
+				string dateLog = "";
+				foreach (string d in dates) {
+					Debug.Log (PlayerPrefs.GetFloat (d));
+					string playedMins = string.Format("{0:N2}", PlayerPrefs.GetFloat (d) / 60.0);
+					dateLog += d + ": " + playedMins + "\n";
+				}
+
+				textContent = dateLog;
+			}
+
+			dateText.text = textContent;
+
+
+		}
+		else
+		{
 			logSetting.SetActive (false);
+		}
 	}
 
     public void SoundOff( GameObject Off )

@@ -421,6 +421,32 @@ public class mainscript : MonoBehaviour {
         
 	}
 
+	void OnApplicationQuit(){
+		string playDates;
+		string theDate = System.DateTime.Now.ToString ("yyyyMMdd");
+		float timePlayed = Time.time;
+
+//		Debug.Log ("This time: " + Time.time);
+
+		if (PlayerPrefs.HasKey (theDate)) {
+			float timeAlreadyPlayed = PlayerPrefs.GetFloat (theDate);
+			timePlayed += timeAlreadyPlayed;
+		}
+
+		PlayerPrefs.SetFloat (theDate, timePlayed);
+
+
+		if (PlayerPrefs.HasKey ("PlayDates")) {
+			playDates = PlayerPrefs.GetString ("PlayDates");
+			playDates += "," + theDate;
+		} else {
+			playDates = theDate;
+		}
+
+		PlayerPrefs.SetString("PlayDates", playDates);
+//		Debug.Log ("Played dates: " + PlayerPrefs.GetString ("PlayDates"));
+	}
+
 	public void CheckLosing(){
 		fixedBalls = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[];
 		foreach(GameObject obj in fixedBalls) {
@@ -789,7 +815,7 @@ public class mainscript : MonoBehaviour {
         }
             CheckFreeChicken();
     }
-
+		
 
 }
 

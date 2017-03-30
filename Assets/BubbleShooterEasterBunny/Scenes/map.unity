@@ -3688,7 +3688,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1038714121}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -6703,7 +6703,7 @@ GameObject:
   - component: {fileID: 1723335199}
   - component: {fileID: 1723335198}
   m_Layer: 5
-  m_Name: Text
+  m_Name: dateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6741,7 +6741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.36494377, g: 0.36518613, b: 0.36764705, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6750,18 +6750,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0a0d2cb73e287544895a3718c74ae69b, type: 3}
-    m_FontSize: 50
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coins shop
+  m_Text: 'Dates:'
 --- !u!222 &1723335199
 CanvasRenderer:
   m_ObjectHideFlags: 0
