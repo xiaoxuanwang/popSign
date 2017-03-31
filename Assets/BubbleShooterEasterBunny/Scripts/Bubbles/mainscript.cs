@@ -421,12 +421,13 @@ public class mainscript : MonoBehaviour {
         
 	}
 
-	void OnApplicationQuit(){
+	// Use OnApplicationPause instead of OnApplicationQuit for Android
+	void OnApplicationPause(bool pauseStatus){
 		string playDates;
 		string theDate = System.DateTime.Now.ToString ("yyyyMMdd");
 		float timePlayed = Time.time;
 
-//		Debug.Log ("This time: " + Time.time);
+		Debug.Log ("This time: " + Time.time);
 
 		if (PlayerPrefs.HasKey (theDate)) {
 			float timeAlreadyPlayed = PlayerPrefs.GetFloat (theDate);
@@ -438,13 +439,16 @@ public class mainscript : MonoBehaviour {
 
 		if (PlayerPrefs.HasKey ("PlayDates")) {
 			playDates = PlayerPrefs.GetString ("PlayDates");
-			playDates += "," + theDate;
+
+			if(!playDates.Contains(theDate))
+				playDates += "," + theDate;
+		
 		} else {
 			playDates = theDate;
 		}
 
 		PlayerPrefs.SetString("PlayDates", playDates);
-//		Debug.Log ("Played dates: " + PlayerPrefs.GetString ("PlayDates"));
+		Debug.Log ("Played dates: " + PlayerPrefs.GetString ("PlayDates"));
 	}
 
 	public void CheckLosing(){

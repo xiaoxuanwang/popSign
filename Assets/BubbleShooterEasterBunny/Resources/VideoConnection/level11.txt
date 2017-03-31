@@ -18,5 +18,5 @@
 	"yellowfileName":"drink",
 	"yellowframeNumber":"33",
 	"yellowfolderName":"Sequence/set3/drink",
-	"yelloImageName": "WordIcons/drink"
+	"yellowImageName": "WordIcons/drink"
 }

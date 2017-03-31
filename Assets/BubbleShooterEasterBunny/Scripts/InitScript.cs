@@ -284,16 +284,21 @@ namespace InitScriptName
         {
             if (!GameObject.Find("Canvas").transform.Find("MenuPlay").gameObject.activeSelf)
             {
+				currentTarget = LevelData.GetTarget(number);
+				//PopSign: randomize mapping
+				int randomNumber = UnityEngine.Random.Range(1, 41);
+				Debug.Log ("Randomized number generated: " + randomNumber);
+
                 PlayerPrefs.SetInt("OpenLevel", number);
+				PlayerPrefs.SetInt ("OpenRandomLevel", randomNumber);
                 PlayerPrefs.Save();
                 openLevel = number;
-                currentTarget = LevelData.GetTarget(number);
-
+                
 				// Set MenuPlay visible
                 GameObject.Find("Canvas").transform.Find("MenuPlay").gameObject.SetActive(true);
 
 //				//POPSign videoManager reset
-//				VideoManager.resetVideoManager ();
+				VideoManager.resetVideoManager ();
             }
         }
 

@@ -139,10 +139,12 @@ public class AnimationManager : MonoBehaviour
         }
         if( gameObject.name == "MenuComplete" )
         {
-             Application.LoadLevel( "map" );
+			LogPlayTime ();
+            Application.LoadLevel( "map" );
         }
         if( gameObject.name == "MenuGameOver" )
         {
+			LogPlayTime ();
             Application.LoadLevel( "map" );
         }
 
@@ -158,6 +160,36 @@ public class AnimationManager : MonoBehaviour
 
         gameObject.SetActive( false );
     }
+
+	private void LogPlayTime()
+	{
+		string playDates;
+		string theDate = System.DateTime.Now.ToString ("yyyyMMdd");
+		float timePlayed = Time.time;
+
+		Debug.Log ("This time: " + Time.time);
+
+		if (PlayerPrefs.HasKey (theDate)) {
+			float timeAlreadyPlayed = PlayerPrefs.GetFloat (theDate);
+			timePlayed += timeAlreadyPlayed;
+		}
+
+		PlayerPrefs.SetFloat (theDate, timePlayed);
+
+
+		if (PlayerPrefs.HasKey ("PlayDates")) {
+			playDates = PlayerPrefs.GetString ("PlayDates");
+
+			if(!playDates.Contains(theDate))
+				playDates += "," + theDate;
+
+		} else {
+			playDates = theDate;
+		}
+
+		PlayerPrefs.SetString("PlayDates", playDates);
+		Debug.Log ("Played dates: " + PlayerPrefs.GetString ("PlayDates"));
+	}
 
     public void Play()
     {
@@ -179,6 +211,7 @@ public class AnimationManager : MonoBehaviour
         }
         else if( gameObject.name == "MenuGameOver" )
         {
+			LogPlayTime ();
             Application.LoadLevel( "map" );
         }
         else if( gameObject.name == "MenuPlay" )
