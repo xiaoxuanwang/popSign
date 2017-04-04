@@ -27,6 +27,8 @@ public class MenuPlay : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sharedVideoManager = VideoManager.getVideoManager();
+
+		sharedVideoManager.curtVideoIndex = 0;
 		changeMenuPlayVideo ();
 	}
 	

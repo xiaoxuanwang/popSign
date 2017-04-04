@@ -282,6 +282,7 @@ namespace InitScriptName
 
         public void OnLevelClicked(int number)
         {
+			Debug.Log ("ball clicked");
             if (!GameObject.Find("Canvas").transform.Find("MenuPlay").gameObject.activeSelf)
             {
 				currentTarget = LevelData.GetTarget(number);
@@ -294,11 +295,15 @@ namespace InitScriptName
                 PlayerPrefs.Save();
                 openLevel = number;
                 
+				//POPSign videoManager reset
+				VideoManager.resetVideoManager ();
+
 				// Set MenuPlay visible
                 GameObject.Find("Canvas").transform.Find("MenuPlay").gameObject.SetActive(true);
+				MenuPlay menuPlay = (MenuPlay) GameObject.Find("Canvas").transform.Find("MenuPlay").GetComponent<MenuPlay>();
+				menuPlay.changeMenuPlayVideo ();
 
-//				//POPSign videoManager reset
-				VideoManager.resetVideoManager ();
+
             }
         }
 
