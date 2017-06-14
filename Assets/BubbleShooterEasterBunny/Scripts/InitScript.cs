@@ -77,7 +77,7 @@ namespace InitScriptName
 
         public void Awake()
         {
-//			PlayerPrefs.DeleteAll ();
+			PlayerPrefs.DeleteAll ();
             Instance = this;
             if (Application.loadedLevelName == "map")
             {
