@@ -196,6 +196,7 @@ public class mainscript : MonoBehaviour {
 
 		StartCoroutine( CheckColors());
 
+
 	}
 
 	IEnumerator CheckColors ()
@@ -286,6 +287,14 @@ public class mainscript : MonoBehaviour {
 
         GamePlay.Instance.GameStatus = GameState.BlockedGame;
         //		GameObject.Find("GUIHighscore").GetComponent<GUIText>().text = "High Score: " + highScore+"";
+
+		// PopSign: check whether should show tutorial
+		if (!PlayerPrefs.HasKey ("Tutorial")) {
+			GameObject.Find ("Canvas").transform.Find( "Tutorial" ).gameObject.SetActive (true);
+			PlayerPrefs.SetInt ("Tutorial", 0);
+		} else {
+			GameObject.Find ("Canvas").transform.Find( "Tutorial" ).gameObject.SetActive (false);
+		}
     }
 	
 	// Update is called once per frame
